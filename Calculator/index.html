@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <style>
+.calculator {
+    padding: 10px;
+    border-radius: 1em;
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    background-color: #050e48;
+    box-shadow: rgba(118, 1, 1, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.display-box {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #f4f7f0;
+    border: solid rgb(52, 81, 93) 0.5px;
+    color: rgb(81, 62, 80);
+    border-radius: 5px;
+    width: 95%;
+    height: 60%;
+}
+.head{
+  height: 10%;
+
+}
+h1{
+  color: rgb(112, 72, 28);
+  text-align: center;
+}
+#btn {
+    background-color: #eeb965;
+}
+input[type=button] {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #f1f16d;
+    color: rgb(140, 14, 78);
+    border: solid rgb(127, 14, 219) 0.5px;
+    width: 75%;
+    border-radius: 5px;
+    height: 65%;
+    outline: none;
+}
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+  </style>
+</head>
+
+<body>
+  <div class="head">
+    <h1>CALCULATOR</h1>
+
+  </div>
+
+<table class="calculator" >
+  <tr>
+    <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+
+    <!-- clearScreen() function clears all the values -->
+    <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+  </tr>
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" value="1" onclick="display('1')" /> </td>
+    <td> <input type="button" value="2" onclick="display('2')" /> </td>
+    <td> <input type="button" value="3" onclick="display('3')" /> </td>
+    <td> <input type="button" value="/" onclick="display('/')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="4" onclick="display('4')" /> </td>
+    <td> <input type="button" value="5" onclick="display('5')" /> </td>
+    <td> <input type="button" value="6" onclick="display('6')" /> </td>
+    <td> <input type="button" value="-" onclick="display('-')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="7" onclick="display('7')" /> </td>
+    <td> <input type="button" value="8" onclick="display('8')" /> </td>
+    <td> <input type="button" value="9" onclick="display('9')" /> </td>
+    <td> <input type="button" value="+" onclick="display('+')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="." onclick="display('.')" /> </td>
+    <td> <input type="button" value="0" onclick="display('0')" /> </td>
+    <td> <input type="button" value="*" onclick="display('*')" /> </td>
+
+
+    <!-- calculate() function evaluates the mathematical expression -->
+    <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+  </tr>
+</table>
+
+<script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
